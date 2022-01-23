@@ -59,12 +59,12 @@ func GetCharPos(asciiVal int32) int {
 }
 
 func main() {
-	text, err := ioutil.ReadFile("analysis/text.txt")
+	text, err := ioutil.ReadFile("caesar/text.txt")
 	if err != nil {
 		panic(err)
 	}
 	string := string(text)
-	
+
 	TextEncrypt := TextEncrypt(string, 3)
 	TextDecrypt := TextDecrypt(TextEncrypt, 3)
 	fmt.Println(TextEncrypt)
